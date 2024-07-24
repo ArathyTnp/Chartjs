@@ -25,7 +25,12 @@ function DoughnutChart() {
     layout: {
       padding: 20,
     },
+    //rotation: -Math.PI / 2,
     plugins: {
+      tooltip: {
+        enabled: false, // Disable tooltips
+      },
+      
       legend: {
         position: 'right',
         labels: {
@@ -121,9 +126,9 @@ function DoughnutChart() {
   }, []);
 
   return (
-    <div className="w-72 h-72 p-4 border bg-white">
+    <div className="w-72 h-80 p-4 border ">
       <h3 className="text-lg font-semibold text-gray-700 mb-4">Doughnut Chart</h3>
-      <div className="w-full h-full flex items-center justify-center">
+      <div className="w-full h-60 flex items-center justify-center">
         <Doughnut
           data={data}
           options={options}

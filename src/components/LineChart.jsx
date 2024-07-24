@@ -53,21 +53,51 @@ function LineChart() {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      y: {
+        ticks: {
+          font: {
+            size: 9, // Change font size for y axis
+          },
+        },
+      },
+      x: {
+        ticks: {
+          font: {
+            size: 9, // Change font size for x axis
+          },
+        },
+      },
+    },
     plugins: {
       legend: {
         position: 'top',
+        labels: {
+          usePointStyle: true,
+          pointStyle: 'circle',
+          font: {
+            size: 10,
+          },
+        },
       },
       title: {
         display: true,
-        text: 'Financial Report for 2021'
-      }
-    }
+        text: 'Financial Report for 2021',
+      },
+    },
   };
+  
 
   return (
-    <div className=' w-[40%] h-[50%]'>
-      <Line options={options} data={data} />
+   
+    <div className="w-72 h-80 p-4 border  ">
+    <h3 className="text-lg font-semibold text-gray-700 mb-4">Line Graph</h3>
+    <div className="w-full  h-60  flex items-center justify-center ">
+   
+    <Line options={options} data={data} />
     </div>
+  </div>
   )
 }
 

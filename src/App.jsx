@@ -10,9 +10,9 @@ function App() {
     <>
     <div className=" m-4">
       <Card/>
-      {/* <DoughnutChart/>
-      <LineChart/>
-      <BarChart/>  */}
+       {/* <DoughnutChart/> */}
+      {/* <LineChart/> */}
+      {/* <BarChart/>   */}
       </div>
       
     </>

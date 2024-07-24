@@ -40,13 +40,25 @@ function BarChart() {
     scales: {
       y: {
         beginAtZero: true,
+        ticks: {
+          font: {
+            size: 9, //change font size for y axix
+          },
+        },
+      },
+      x: {
+        ticks: {
+          font: {
+            size: 9,//change font size for y axix
+          },
+        },
       },
     },
     plugins: {
       legend: {
         labels: {
           font: {
-            size: 26,
+            size: 15,
           },
         },
       },
@@ -87,9 +99,12 @@ function BarChart() {
   };
 
   return (
-    <div className="w-[30%] h-96">
-      <Bar options={options} data={data} />
+    <div className="w-72 h-80 p p-4 border  ">
+    <h3 className="text-lg font-semibold text-gray-700 mb-4">Bar Graph</h3>
+    <div className="w-full h-60  flex items-center justify-center ">
+    <Bar options={options} data={data} />
     </div>
+  </div>
   );
 }
 
