@@ -40,6 +40,7 @@ function BarChart() {
     scales: {
       y: {
         beginAtZero: true,
+        stacked : true,
         ticks: {
           font: {
             size: 9, //change font size for y axix
@@ -47,6 +48,7 @@ function BarChart() {
         },
       },
       x: {
+        stacked: true,
         ticks: {
           font: {
             size: 9,//change font size for y axix
